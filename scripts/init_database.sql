@@ -20,7 +20,7 @@ USE master;
 GO
 
 -- Check if the database named 'DataWarehouse' exists in the system.
-IF EXISTS (SELECT * FROM sys.databases WHERE name = 'DataWarehouse')
+IF EXISTS (SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
 BEGIN
     -- Change the database to SINGLE_USER mode to disconnect any active connections.
     -- This allows us to drop the database without encountering errors from active sessions.
@@ -32,18 +32,23 @@ BEGIN
     -- Print a message indicating that the database has been dropped successfully.
     PRINT 'Database DataWarehouse dropped successfully.';
 END;
+GO
 
 -- Create a new database named 'DataWarehouse'.
 CREATE DATABASE DataWarehouse;
 
 -- Print a message indicating that the new database has been created successfully.
 PRINT 'Database DataWarehouse created successfully.';
+GO
 
 -- Using Database DataWarehouse
 USE DataWarehouse;
+GO
 
 -- Create Schemas
 CREATE SCHEMA bronze;
-GO CREATE SCHEMA silver;
-GO CREATE SCHEMA gold;
+GO
+CREATE SCHEMA silver;
+GO
+CREATE SCHEMA gold;
 GO
