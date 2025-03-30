@@ -1,4 +1,4 @@
--- Create a procedure to load the bronze layer
+-- Procedure to full load the data into the bronze layer from the source files
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
     DECLARE @start_time DATETIME2, @end_time DATETIME2, @batch_start_time DATETIME2, @batch_end_time DATETIME2;
@@ -132,4 +132,4 @@ BEGIN
         PRINT 'Error State' + CAST(ERROR_STATE() AS NVARCHAR(10));
         PRINT '===========================================';
     END CATCH
-END
+END;
