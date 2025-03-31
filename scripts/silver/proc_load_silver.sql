@@ -16,7 +16,7 @@ BEGIN
         SET @start_time = GETDATE();
         PRINT '>> Truncating Table: silver.crm_cust_info';
         TRUNCATE TABLE silver.crm_cust_info;
-        -- -- Inserting the clean data into the silver.crm_cust_info table
+        -- Inserting the clean data into the silver.crm_cust_info table
         PRINT '>> Inserting Data Into: silver.crm_cust_info';
         INSERT INTO silver.crm_cust_info
             (
@@ -77,7 +77,7 @@ BEGIN
         SELECT
             prd_id,
             REPLACE(SUBSTRING(prd_key, 1, 5), '-', '_') AS cat_id,
-            SUBSTRING(prd_key,7, LEN(prd_key)) AS prd_key,
+            SUBSTRING(prd_key, 7, LEN(prd_key)) AS prd_key,
             prd_nm,
             COALESCE(prd_cost, 0) AS  prd_cost,
             CASE UPPER(TRIM(prd_line))
@@ -88,7 +88,7 @@ BEGIN
                 ELSE 'n/a'
             END AS prd_line,
             CAST(prd_start_dt AS DATE),
-            CAST(DATEADD(DAY, -1, LEAD(prd_start_dt) OVER(PARTITION BY prd_key ORDER BY prd_start_dt)) AS DATE) AS Prd_end_dt
+            CAST(DATEADD(DAY, -1, LEAD(prd_start_dt) OVER(PARTITION BY prd_key ORDER BY prd_start_dt)) AS DATE) AS prd_end_dt
         FROM bronze.crm_prd_info;
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(MILLISECOND, @start_time, @end_time) AS NVARCHAR) + ' milliseconds';
@@ -221,7 +221,7 @@ BEGIN
             cat,
             subcat,
             maintenance
-        FROM bronze.erp_px_cat_g1v2
+        FROM bronze.erp_px_cat_g1v2;
         SET @end_time = GETDATE();
         PRINT '>> Load Duration: ' + CAST(DATEDIFF(MILLISECOND, @start_time, @end_time) AS NVARCHAR) + ' milliseconds';
         PRINT '-----------------';
