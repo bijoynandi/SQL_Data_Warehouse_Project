@@ -6,7 +6,6 @@ This project is designed to demonstrate proficiency in SQL development, data arc
 
 ## Data Architecture
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
-![Data Architecture](docs\data_warehouse_architecture.drawio)
 
 1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
 
@@ -55,5 +54,3 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## License
 This project is licensed under the MIT License.
-## Contact
-For questions or inquiries, please contact [Bijoy Nandi](bijoynandi31@gmail.com).
