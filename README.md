@@ -1,10 +1,10 @@
-## Project Title
+# Project Title
 Modern Data Warehouse with SQL Server.
 
-## Project Overview
+# Project Overview
 This project is designed to demonstrate proficiency in SQL development, data architecture, data engineering, ETL pipelines, data modeling, and data analytics.
 
-## Data Architecture
+# Data Architecture
 The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
 
 1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
@@ -29,12 +29,12 @@ The data engineering process includes:
 - **Data Integration**: Combine data from multiple sources into a single, user-friendly data model.
 - **Data Modeling**: Design a star schema for efficient data analysis.
 
-## Analytics and Reporting
+# Analytics and Reporting
 The analytics and reporting process includes:
 - **SQL-based Analytics**: Develop SQL queries to extract insights from the data model.
 - **Reporting**: Generate reports and dashboards to visualize key business metrics.
 
-## Project Structure
+# Project Structure
 - `datasets/`: Contains raw datasets used for the project.
 - `docs/`: Project documentation and architecture details.
 - `scripts/`: SQL scripts for data ingestion, cleansing, and analytics.
@@ -52,18 +52,18 @@ The analytics and reporting process includes:
 - **ETL Pipelines**: I gained experience in building ETL pipelines using SQL Server.
 - **Data Quality**: I learned about data quality management and best practices.
 
-## Usage
+# Usage
 To use this project, follow these steps:
 1. Clone this repository.
 2. Set up SQL Server and create the necessary databases and tables.
 3. Run the ETL scripts to ingest data from CSV files.
 4. Explore the data model and analytics queries.
 
-## Contributing
+# Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-## License
+# License
 This project is licensed under the MIT License.
 
-## Conclusion
+# Conclusion
 This project demonstrates proficiency in SQL development, data architecture, data engineering. It provides a solid foundation for further data-driven projects and analytics. Feel free to explore the code and adapt it to your specific needs. If you have any questions or feedback, please don't hesitate to reach out. Happy data engineering!
