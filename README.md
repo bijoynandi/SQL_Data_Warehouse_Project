@@ -42,6 +42,16 @@ The analytics and reporting process includes:
 - `LICENSE`: License information.
 - `README.md`: This file.
 
+# What I Learned
+- **SQL Server**: I gained hands-on experience with SQL Server, including database creation, data ingestion, and data modeling.
+- **Data Engineering**: I learned the importance of data quality, data cleansing, and data integration in a data engineering project.
+- **Data Modeling**: I gained insights into designing a star schema for efficient data analysis.
+- **Project Management**: I learned how to manage a data engineering project from start to finish.
+- **Data Architecture**: I gained a deeper understanding of data architecture, including the Medallion Architecture and its layers.
+- **Data Warehousing**: I learned about data warehousing concepts and best practices.
+- **ETL Pipelines**: I gained experience in building ETL pipelines using SQL Server.
+- **Data Quality**: I learned about data quality management and best practices.
+
 ## Usage
 To use this project, follow these steps:
 1. Clone this repository.
@@ -54,3 +64,6 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 
 ## License
 This project is licensed under the MIT License.
+
+## Conclusion
+This project demonstrates proficiency in SQL development, data architecture, data engineering. It provides a solid foundation for further data-driven projects and analytics. Feel free to explore the code and adapt it to your specific needs. If you have any questions or feedback, please don't hesitate to reach out. Happy data engineering!
