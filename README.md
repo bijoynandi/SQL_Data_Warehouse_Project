@@ -67,3 +67,9 @@ This project is licensed under the MIT License.
 
 ## Conclusion
 This project demonstrates proficiency in SQL development, data architecture, data engineering. It provides a solid foundation for further data-driven projects and analytics. Feel free to explore the code and adapt it to your specific needs. If you have any questions or feedback, please don't hesitate to reach out. Happy data engineering!
+
+## Acknowledgments
+I would like to express my sincere gratitude to [Baraa Khatib Salkini](https://github.com/DataWithBaraa) for providing the guidance and resources that made this project possible. The expertise was invaluable in helping me build this data warehouse project from scratch and understand the intricacies of data warehousing. I am deeply grateful for the knowledge and support provided by Baraa. Thank you, Baraa!
+
+## Contact
+If you have any questions or would like to connect, feel free to reach out to me at [bijoynandi31@gmail.com](mailto:bijoynandi31@gmail.com).
