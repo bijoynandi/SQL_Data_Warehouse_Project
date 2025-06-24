@@ -1,4 +1,5 @@
 -- Procedure to clean full load the data into the silver layer from the bronze layer
+-- 1. Defining the procedure
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
     DECLARE @start_time DATETIME2, @end_time DATETIME2, @batch_start_time DATETIME2, @batch_end_time DATETIME2;
@@ -241,3 +242,7 @@ BEGIN
         PRINT '===========================================';
     END CATCH
 END;
+
+
+-- 2. Executing the stored procedure
+-- EXEC silver.load_silver;

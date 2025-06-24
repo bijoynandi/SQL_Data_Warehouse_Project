@@ -1,4 +1,5 @@
 -- Procedure to full load the data into the bronze layer from the source files
+-- 1. Defining the procedure
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
     DECLARE @start_time DATETIME2, @end_time DATETIME2, @batch_start_time DATETIME2, @batch_end_time DATETIME2;
@@ -48,7 +49,7 @@ BEGIN
 
         -- Truncating the table in order to get the latest data from the source file (Full Load)
         SET @start_time = GETDATE();
-        PRINT '>> Inserting Data Into: bronze.crm_sales_details...';
+        PRINT '>> Truncating Table: bronze.crm_sales_details...';
         TRUNCATE TABLE bronze.crm_sales_details;
         -- Bulk Inserting sales_details.csv into bronze.crm_sales_details
         PRINT '>> Inserting Data Into: bronze.crm_sales_details...';
@@ -133,3 +134,7 @@ BEGIN
         PRINT '===========================================';
     END CATCH
 END;
+
+
+-- 2. Executing the stored procedure
+-- EXEC bronze.load_bronze;
