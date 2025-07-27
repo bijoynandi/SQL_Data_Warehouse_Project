@@ -30,16 +30,17 @@ SELECT DISTINCT
 FROM bronze.erp_px_cat_g1v2
 ORDER BY maintenance;
 
--- Check for Invalid Dates
+-- Check for Invalid Dates (corrected for DATE data type)
 SELECT
     sls_order_dt,
     sls_ship_dt,
     sls_due_dt
 FROM silver.crm_sales_details
-WHERE sls_due_dt <=0 
-OR LEN(sls_due_dt) != 8 
-OR sls_due_dt > 20500101 
-OR sls_due_dt < 19000101;
+WHERE sls_due_dt IS NULL 
+OR sls_due_dt < '1900-01-01' 
+OR sls_due_dt > '2050-01-01'
+OR sls_order_dt IS NULL
+OR sls_ship_dt IS NULL;
 
 -- Identify Out-of-Range Dates
 SELECT

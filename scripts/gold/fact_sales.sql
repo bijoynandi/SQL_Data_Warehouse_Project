@@ -1,4 +1,6 @@
 -- Create a view with the sales information
+USE DataWarehouse;
+GO
 IF OBJECT_ID('gold.fact_sales', 'V') IS NOT NULL
 DROP VIEW gold.fact_sales;
 GO

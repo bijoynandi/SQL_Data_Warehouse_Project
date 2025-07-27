@@ -1,6 +1,9 @@
 -- Procedure to full load the data into the bronze layer from the source files
 -- 1. Defining the procedure
-CREATE OR ALTER PROCEDURE bronze.load_bronze AS
+USE DataWarehouse;
+GO
+CREATE OR ALTER PROCEDURE bronze.load_bronze
+AS
 BEGIN
     DECLARE @start_time DATETIME2, @end_time DATETIME2, @batch_start_time DATETIME2, @batch_end_time DATETIME2;
     BEGIN TRY
@@ -20,7 +23,7 @@ BEGIN
         -- Bulk Inserting cust_info.csv into bronze.crm_cust_info
         PRINT '>> Inserting Data Into: bronze.crm_cust_info...';
         BULK INSERT bronze.crm_cust_info
-        FROM 'C:\Users\bijoy\OneDrive\Documents\Data Analytics 2025\SQL\SQL Data Warehouse Project\SQL_Data_Warehouse_Project\datasets\source_crm\cust_info.csv'
+        FROM '/opt/analytics/SQL/SQL_Data_Warehouse_Project/datasets/source_crm/cust_info.csv'
         WITH (
             FIRSTROW = 2,
             FIELDTERMINATOR = ',',
@@ -37,7 +40,7 @@ BEGIN
         -- Bulk Inserting prd_info.csv into bronze.crm_prd_info
         PRINT '>> Inserting Data Into: bronze.crm_prd_info...';
         BULK INSERT bronze.crm_prd_info
-        FROM 'C:\Users\bijoy\OneDrive\Documents\Data Analytics 2025\SQL\SQL Data Warehouse Project\SQL_Data_Warehouse_Project\datasets\source_crm\prd_info.csv'
+        FROM '/opt/analytics/SQL/SQL_Data_Warehouse_Project/datasets/source_crm/prd_info.csv'
         WITH (
             FIRSTROW = 2,
             FIELDTERMINATOR = ',',
@@ -54,7 +57,7 @@ BEGIN
         -- Bulk Inserting sales_details.csv into bronze.crm_sales_details
         PRINT '>> Inserting Data Into: bronze.crm_sales_details...';
         BULK INSERT bronze.crm_sales_details
-        FROM 'C:\Users\bijoy\OneDrive\Documents\Data Analytics 2025\SQL\SQL Data Warehouse Project\SQL_Data_Warehouse_Project\datasets\source_crm\sales_details.csv'
+        FROM '/opt/analytics/SQL/SQL_Data_Warehouse_Project/datasets/source_crm/sales_details.csv'
         WITH (
             FIRSTROW = 2,
             FIELDTERMINATOR = ',',
@@ -75,7 +78,7 @@ BEGIN
         -- Bulk Inserting cust_az12.csv into bronze.erp_cust_az12
         PRINT '>> Inserting Data Into: bronze.erp_cust_az12...';
         BULK INSERT bronze.erp_cust_az12
-        FROM 'C:\Users\bijoy\OneDrive\Documents\Data Analytics 2025\SQL\SQL Data Warehouse Project\SQL_Data_Warehouse_Project\datasets\source_erp\CUST_AZ12.csv'
+        FROM '/opt/analytics/SQL/SQL_Data_Warehouse_Project/datasets/source_erp/CUST_AZ12.csv'
         WITH (
             FIRSTROW = 2,
             FIELDTERMINATOR = ',',
@@ -92,7 +95,7 @@ BEGIN
         -- Bulk Inserting loc_a101.csv into bronze.erp_loc_a101
         PRINT '>> Inserting Data Into: bronze.erp_loc_a101...';
         BULK INSERT bronze.erp_loc_a101
-        FROM 'C:\Users\bijoy\OneDrive\Documents\Data Analytics 2025\SQL\SQL Data Warehouse Project\SQL_Data_Warehouse_Project\datasets\source_erp\LOC_A101.csv'
+        FROM '/opt/analytics/SQL/SQL_Data_Warehouse_Project/datasets/source_erp/LOC_A101.csv'
         WITH (
             FIRSTROW = 2,
             FIELDTERMINATOR = ',',
@@ -109,7 +112,7 @@ BEGIN
         -- Bulk Inserting px_cat_g1v2.csv into bronze.erp_px_cat_g1v2
         PRINT '>> Inserting Data Into: bronze.erp_px_cat_g1v2...';
         BULK INSERT bronze.erp_px_cat_g1v2
-        FROM 'C:\Users\bijoy\OneDrive\Documents\Data Analytics 2025\SQL\SQL Data Warehouse Project\SQL_Data_Warehouse_Project\datasets\source_erp\PX_CAT_G1V2.csv'
+        FROM '/opt/analytics/SQL/SQL_Data_Warehouse_Project/datasets/source_erp/PX_CAT_G1V2.csv'
         WITH (
             FIRSTROW = 2,
             FIELDTERMINATOR = ',',

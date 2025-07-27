@@ -1,5 +1,7 @@
 -- Procedure to clean full load the data into the silver layer from the bronze layer
 -- 1. Defining the procedure
+USE DataWarehouse;
+GO
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
     DECLARE @start_time DATETIME2, @end_time DATETIME2, @batch_start_time DATETIME2, @batch_end_time DATETIME2;

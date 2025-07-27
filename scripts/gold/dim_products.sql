@@ -1,4 +1,6 @@
 -- Create a view with the product information
+USE DataWarehouse;
+GO
 IF OBJECT_ID('gold.dim_products', 'V') IS NOT NULL
 DROP VIEW gold.dim_products;
 GO
